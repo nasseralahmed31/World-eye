@@ -12,9 +12,8 @@ android {
         applicationId = "com.eyeoftheworld.app"
         minSdk = 24
         targetSdk = 34
-
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "1.0"
 
         testInstrumentationRunner =
             "androidx.test.runner.AndroidJUnitRunner"
@@ -41,25 +40,20 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
 
     val cameraVersion = "1.3.1"
 
-    implementation(
-        "androidx.camera:camera-core:$cameraVersion"
-    )
-    implementation(
-        "androidx.camera:camera-camera2:$cameraVersion"
-    )
-    implementation(
-        "androidx.camera:camera-lifecycle:$cameraVersion"
-    )
-    implementation(
-        "androidx.camera:camera-view:$cameraVersion"
-    )
+    implementation("androidx.camera:camera-core:$cameraVersion")
+    implementation("androidx.camera:camera-camera2:$cameraVersion")
+    implementation("androidx.camera:camera-lifecycle:$cameraVersion")
+    implementation("androidx.camera:camera-view:$cameraVersion")
 
     implementation("org.tensorflow:tensorflow-lite:2.14.0")
     implementation("org.tensorflow:tensorflow-lite-gpu:2.14.0")
+    implementation("org.tensorflow:tensorflow-lite-gpu-api:2.14.0")
+
+    testImplementation("junit:junit:4.13.2")
 }
